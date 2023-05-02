@@ -1,5 +1,17 @@
-<ul>
+<!-- Modelo antigo -->
+<!-- <ul>
   <li *ngFor="let tarefa of arrayTarefas">
     {{ tarefa.titulo }} ({{ tarefa.dataEntrega }})
   </li>
-</ul>
+</ul> -->
+
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let tarefa of arrayTarefas" hideToggle>
+    <mat-expansion-panel-header>{{ tarefa.titulo }}</mat-expansion-panel-header>
+    <ul>
+      <li>Descrição: {{ tarefa.descricao }}</li>
+      <li>Data de Entrega; {{ tarefa.dataEntrega }}</li>
+      <li>Concluída: {{ tarefa.concluida }}</li>
+    </ul>
+  </mat-expansion-panel>
+</mat-accordion>

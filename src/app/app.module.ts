@@ -21,8 +21,7 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    PagesModule,
-    MaterialModule
+    PagesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
