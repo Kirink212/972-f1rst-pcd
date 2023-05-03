@@ -6,12 +6,7 @@
 </ul> -->
 
 <mat-accordion>
-  <mat-expansion-panel *ngFor="let tarefa of arrayTarefas" hideToggle>
-    <mat-expansion-panel-header>{{ tarefa.titulo }}</mat-expansion-panel-header>
-    <ul>
-      <li>Descrição: {{ tarefa.descricao }}</li>
-      <li>Data de Entrega; {{ tarefa.dataEntrega }}</li>
-      <li>Concluída: {{ tarefa.concluida }}</li>
-    </ul>
-  </mat-expansion-panel>
+  <app-task-item *ngFor="let tarefa of arrayTarefas" [t]="tarefa">
+  </app-task-item>
+  <app-task-item></app-task-item>
 </mat-accordion>

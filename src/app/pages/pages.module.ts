@@ -5,12 +5,14 @@ import { MaterialModule } from '../material/material.module';
 import { TasksListComponent } from './tasks-list/tasks-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TaskCreateComponent } from './task-create/task-create.component';
+import { TaskItemComponent } from './tasks-list/task-item/task-item.component';
 
 @NgModule({
   declarations: [
     TasksListComponent,
     PageNotFoundComponent,
-    TaskCreateComponent
+    TaskCreateComponent,
+    TaskItemComponent
   ],
   imports: [
     CommonModule,
