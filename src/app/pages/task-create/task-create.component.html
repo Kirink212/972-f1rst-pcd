@@ -1,1 +1,21 @@
-<p>task-create works!</p>
+<form (submit)="formSubmit()">
+  <mat-form-field appearance="fill">
+    <mat-label>Título</mat-label>
+    <!-- <input [value]="titulo" (input)="registraTitulo($event)" matInput> -->
+    <input [(ngModel)]="titulo" name="titulo" matInput>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Descrição</mat-label>
+    <textarea matInput></textarea>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Data de Entrega</mat-label>
+    <input type="date" matInput>
+  </mat-form-field>
+
+  <mat-checkbox class="example-margin">Concluída</mat-checkbox>
+
+  <button mat-button type="submit">Enviar</button>
+</form>

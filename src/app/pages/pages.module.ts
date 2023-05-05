@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { MaterialModule } from '../material/material.module';
 import { TasksListComponent } from './tasks-list/tasks-list.component';
@@ -16,7 +17,8 @@ import { TaskItemComponent } from './tasks-list/task-item/task-item.component';
   ],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   exports: [
     TasksListComponent
