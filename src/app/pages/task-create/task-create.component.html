@@ -2,20 +2,20 @@
   <mat-form-field appearance="fill">
     <mat-label>Título</mat-label>
     <!-- <input [value]="titulo" (input)="registraTitulo($event)" matInput> -->
-    <input [(ngModel)]="titulo" name="titulo" matInput>
+    <input [(ngModel)]="novaTarefa.titulo" name="titulo" matInput>
   </mat-form-field>
 
   <mat-form-field appearance="fill">
     <mat-label>Descrição</mat-label>
-    <textarea matInput></textarea>
+    <textarea [(ngModel)]="novaTarefa.descricao" name="descricao" matInput></textarea>
   </mat-form-field>
 
   <mat-form-field appearance="fill">
     <mat-label>Data de Entrega</mat-label>
-    <input type="date" matInput>
+    <input [(ngModel)]="novaTarefa.dataEntrega" name="dataEntrega" type="date" matInput>
   </mat-form-field>
 
-  <mat-checkbox class="example-margin">Concluída</mat-checkbox>
+  <mat-checkbox [(ngModel)]="novaTarefa.concluida" name="concluida">Concluída</mat-checkbox>
 
   <button mat-button type="submit">Enviar</button>
 </form>
