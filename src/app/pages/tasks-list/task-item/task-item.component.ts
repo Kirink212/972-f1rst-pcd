@@ -15,7 +15,7 @@ export class TaskItemComponent {
 
   removerTarefa() {
     const arrayTarefas: Tarefa[] = JSON.parse(localStorage.getItem("arrayTarefas") || "[]");
-    const indice = arrayTarefas.findIndex((t) => t.id == this.tarefa?.id)
+    const indice = arrayTarefas.findIndex((t) => t.id == this.tarefa?.id);
     arrayTarefas.splice(indice, 1);
     localStorage.setItem("arrayTarefas", JSON.stringify(arrayTarefas));
   }
