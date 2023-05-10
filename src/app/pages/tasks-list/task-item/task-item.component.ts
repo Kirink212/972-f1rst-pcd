@@ -12,4 +12,11 @@ export class TaskItemComponent {
 
   //// Simplemente definindo uma tarefa como indefinida
   @Input('t') tarefa?: Tarefa;
+
+  removerTarefa() {
+    const arrayTarefas: Tarefa[] = JSON.parse(localStorage.getItem("arrayTarefas") || "[]");
+    const indice = arrayTarefas.findIndex((t) => t.id == this.tarefa?.id)
+    arrayTarefas.splice(indice, 1);
+    localStorage.setItem("arrayTarefas", JSON.stringify(arrayTarefas));
+  }
 }

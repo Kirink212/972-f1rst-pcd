@@ -14,4 +14,6 @@
     <li>Data de Entrega: {{ tarefa.dataEntrega }}</li>
     <li>Concluída: {{ tarefa.concluida }}</li>
   </ul>
+  <button mat-raised-button color="primary">Editar</button>
+  <button mat-raised-button color="warn" (click)="removerTarefa()">Remover</button>
 </mat-expansion-panel>
